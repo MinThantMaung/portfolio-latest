@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { inter } from "@/app/ui/fonts";
 import "./globals.css";
+import { FloatingDock } from "./ui/floating-dock";
+import { IconArticle, IconHome } from "@tabler/icons-react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,9 +14,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const links = [
+    {
+      title: "Home",
+      icon: (
+        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/",
+    },
+    {
+      title: "Blogs",
+      icon: (
+        <IconArticle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/blogs",
+    },
+  ];
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        <div className="flex items-center justify-center w-full">
+          <FloatingDock mobileClassName="translate-y-20" items={links} />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
