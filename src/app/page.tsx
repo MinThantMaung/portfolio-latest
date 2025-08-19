@@ -1,5 +1,15 @@
-import Image from "next/image";
+import Hero from "./(hero)/page";
+import { Suspense } from "react";
+import LoadingTest from "./ui/loadingTest";
+import { Skills } from "./components/skills";
 
 export default function Home() {
-  return <>Hello</>;
+  return (
+    <>
+      <div className="bg-white text-black">
+        <Hero />
+        <Skills />
+      </div>
+    </>
+  );
 }
