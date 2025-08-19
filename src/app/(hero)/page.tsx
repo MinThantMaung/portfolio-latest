@@ -13,8 +13,8 @@ const Hero = () => {
 
   return (
     <>
-      <div className="min-h-screen flex justify-center items-center">
-        <div className="flex mx-4 md:mx-10">
+      <div className="min-h-screen flex justify-center items-center mx-4 md:mx-32">
+        <div className="flex">
           <div className="md:w-1/2">
             <h2 className="text-2xl md:text-3xl font-bold mb-2">
               {staticData.name}
@@ -22,10 +22,9 @@ const Hero = () => {
             <div className="flex text-2xl md:text-3xl mb-4">
               {staticData.role} <FlipWords words={words} /> <br />
             </div>
-
-            <div className="text-sm">
-              <RichTextRenderer content={staticData.title} />
-            </div>
+            <p>{staticData.title}</p>
+            <p className="my-4">{staticData.subtitle}</p>
+            <p>{staticData.title_description}</p>
             <a
               href="/resume/minthantmaung.pdf"
               download
