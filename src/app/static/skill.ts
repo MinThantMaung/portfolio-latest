@@ -16,8 +16,8 @@ export const skills = [
   },
   {
     id: "4",
-    name: "tailwind",
-    url: "/languages/tailwindCss.svg",
+    name: "tailwindCss",
+    url: "/languages/tailwind.svg",
   },
   {
     id: "5",
