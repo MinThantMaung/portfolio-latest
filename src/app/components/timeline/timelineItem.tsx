@@ -41,7 +41,7 @@ export const TimelineItem = ({
       </div>
 
       <div
-        className={`timeline-${position} mb-10 ${
+        className={`timeline-${position} mx-1 mb-10 ${
           position === "start" ? "md:text-end" : ""
         }`}
       >
