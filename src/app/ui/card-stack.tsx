@@ -63,6 +63,7 @@ export const CardStack = ({
               fill
               className="absolute inset-0 object-cover rounded-3xl"
               priority={index === 0}
+              sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 33vw"
             />
 
             {/* Optional gradient for text readability */}
