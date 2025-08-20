@@ -1,8 +1,9 @@
 import Hero from "./(hero)/page";
-import { Suspense } from "react";
-import LoadingTest from "./ui/loadingTest";
+import Gallary from "./components/gallary";
+import Quotes from "./components/quotes";
 import { Skills } from "./components/skills";
-import Timeline from "./components/timeline";
+import Timeline from "./components/timeline/timeline";
+import { experienceItems } from "./static/experience";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
         <Hero />
         <Skills />
         <Timeline />
+        <Quotes />
+        <Gallary />
       </div>
     </>
   );
