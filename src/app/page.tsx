@@ -1,9 +1,9 @@
 import Hero from "./(hero)/page";
-import Gallary from "./components/gallary";
+import Changelog from "./components/changelog";
 import Quotes from "./components/quotes";
+import Service from "./components/service";
 import { Skills } from "./components/skills";
 import Timeline from "./components/timeline/timeline";
-import { experienceItems } from "./static/experience";
 
 export default function Home() {
   return (
@@ -12,8 +12,9 @@ export default function Home() {
         <Hero />
         <Skills />
         <Timeline />
+        <Service />
         <Quotes />
-        <Gallary />
+        <Changelog />
       </div>
     </>
   );
