@@ -9,11 +9,9 @@ const Quotes = () => {
     <>
       <div className="flex flex-col lg:flex-row mx-4 md:mx-32">
         <div className="lg:w-1/2 flex flex-col justify-center items-start md:mx-10">
-          {/* <h2 className="font-bold text-3xl">Quotes</h2> */}
           <TextGenerateEffect words={staticData.quote_description} />
-          {/* <div className="mt-6 text-xl font-bold">{staticData.quote_description}</div> */}
         </div>
-        <div className="h-[40rem] flex items-center justify-center lg:w-1/2">
+        <div className="h-screen flex items-center justify-center lg:w-1/2">
           <CardStack items={quotesItem} />
         </div>
       </div>
