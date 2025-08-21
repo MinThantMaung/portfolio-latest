@@ -13,10 +13,10 @@ type TimelineItemProps = {
 const Timeline = () => {
   return (
     <>
-      <h2 className="ml-4 md:ml-32 font-bold text-3xl mt-2 md:mt-6">
+      <h2 className="ml-4 md:ml-0 md:text-center font-bold text-3xl mt-2 md:mt-6">
         {staticData.experience}
       </h2>
-      <div className="mx-4 md:mx-32 my-4 md:my-12">
+      <div className="mx-4 md:mx-24 md:text-center my-4 md:my-12">
         {staticData.exp_description}
       </div>
 
