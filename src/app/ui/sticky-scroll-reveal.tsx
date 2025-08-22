@@ -9,8 +9,10 @@ export const StickyScroll = ({
   contentClassName,
 }: {
   content: {
+    year: string;
     title: string;
     description: string;
+    address: string;
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
@@ -64,7 +66,7 @@ export const StickyScroll = ({
       // animate={{
       //   backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       // }}
-      className="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-md p-10"
+      className="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-md md:p-10 no-scrollbar"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
@@ -80,6 +82,17 @@ export const StickyScroll = ({
                 }}
                 className="text-2xl font-bold text-black"
               >
+                {item.year}
+              </motion.h2>
+              <motion.h2
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                className="text-lg font-bold mt-2 text-black"
+              >
                 {item.title}
               </motion.h2>
               <motion.p
@@ -89,7 +102,18 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-10 max-w-sm text-black"
+                className="text-kg mt-2 max-w-sm text-black"
+              >
+                {item.address}
+              </motion.p>
+              <motion.p
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                className="text-kg mt-6 max-w-sm text-black"
               >
                 {item.description}
               </motion.p>
@@ -101,11 +125,11 @@ export const StickyScroll = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "sticky top-10 hidden h-60 w-80 overflow-hidden rounded-md bg-white lg:block",
+          "sticky top-10 hidden h-60 w-80 overflow-hidden rounded-md bg-white md:flex justify-center items-center",
           contentClassName
         )}
       >
-        {content[activeCard].content ?? null}
+        <div className="text-white">{content[activeCard].title ?? null}</div>
       </div>
     </motion.div>
   );
