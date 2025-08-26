@@ -11,8 +11,10 @@ export const staticData = {
     "I picked up my skills by actually building things and figuring out problems along the way. Most of what I know comes from hands-on experience testing ideas, fixing mistakes, and improving with every project. It’s less about theory and more about what I’ve learned by doing.",
   download: "Download CV",
   experience: "Experience",
+  project_description:
+    "A collection of my featured projects showcasing skills in modern web development, from sleek frontends to full-stack applications.",
   exp_description:
-    "I like building things that feel simple and easy to use. Over time, I’ve gone from just making interfaces look good to really understanding how the whole product comes together. I enjoy learning new things, solving tricky problems, and making sure what I build actually works well for people.",
+    "I love building simple, user-friendly products going beyond looks to solve problems and make things work well for people.",
   quote_description:
     "Here are a few quotes that really resonate with me. They’re bold, motivating, and remind me to stay strong no matter the challenge.",
   service_description:
