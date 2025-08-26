@@ -1,6 +1,6 @@
-import Hero from "./(hero)/page";
 import Certification from "./components/certification";
 import Changelog from "./components/changelog";
+import Hero from "./components/hero";
 import Project from "./components/project";
 import Quotes from "./components/quotes";
 import Service from "./components/service";
