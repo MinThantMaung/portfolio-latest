@@ -1,6 +1,5 @@
 "use client";
 
-import RichTextRenderer from "../RichTextRanderer";
 import { staticData } from "../static";
 import { FlipWords } from "../ui/flip-words";
 
