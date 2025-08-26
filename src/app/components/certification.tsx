@@ -12,7 +12,7 @@ const Certification = () => {
           CERTIFICATES
         </h2>
         <div className="mx-4 md:mx-24 md:text-center mt-6">
-          {staticData.skill_description}
+          {staticData.certificate_description}
         </div>
 
         <div className="md:py-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-4 md:mx-24">

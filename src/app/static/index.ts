@@ -19,4 +19,6 @@ export const staticData = {
     "Here are a few quotes that really resonate with me. They’re bold, motivating, and remind me to stay strong no matter the challenge.",
   service_description:
     "I build modern, fast, scalable web apps from polished UIs to end-to-end solutions using clean, maintainable React and full-stack code.",
+  certificate_description:
+    "Certificates highlighting my skills and ongoing learning journey.",
 };
