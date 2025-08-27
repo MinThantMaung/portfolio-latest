@@ -3,7 +3,7 @@ export type ProjectItem = {
   title: string;
   name: string;
   description: string;
-  image_url: string; // e.g. "/timeline/yts_main.png"
+  image_url: string;
   href: string;
 };
 
