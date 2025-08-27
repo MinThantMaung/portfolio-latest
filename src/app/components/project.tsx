@@ -15,7 +15,7 @@ const Project = () => {
         {staticData.project_description}
       </p>
 
-      <div className="carousel carousel-center rounded-box gap-10 px-10 md:px-24 mt-8 w-full">
+      <div className="carousel carousel-center rounded-box gap-10 md:gap-20 px-10 md:px-24 mt-8 w-full">
         {projectItems.map((item, idx) => (
           <div
             className="carousel-item h-[25rem] flex items-center justify-center"
@@ -40,6 +40,7 @@ const Project = () => {
                     src={item.image_url}
                     alt={item.name}
                     fill
+                    sizes="200"
                     className="object-cover"
                     priority={idx === 0}
                   />
