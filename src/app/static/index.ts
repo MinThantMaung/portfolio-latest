@@ -21,4 +21,6 @@ export const staticData = {
     "I build modern, fast, scalable web apps from polished UIs to end-to-end solutions using clean, maintainable React and full-stack code.",
   certificate_description:
     "Certificates highlighting my skills and ongoing learning journey.",
+  contact_description:
+    "Let’s build something great together. Whether it’s a project idea, collaboration, or just a quick hello feel free to reach out.",
 };
