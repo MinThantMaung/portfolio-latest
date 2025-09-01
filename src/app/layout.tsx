@@ -3,6 +3,8 @@ import { inter } from "@/app/ui/fonts";
 import "./globals.css";
 import { FloatingDock } from "./ui/floating-dock";
 import { IconArticle, IconHome } from "@tabler/icons-react";
+import Providers from "./common/queryWrapper";
+import { ToastProvider } from "./common/ToastProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,10 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <div className="flex items-center justify-center w-full">
-          <FloatingDock mobileClassName="translate-y-20" items={links} />
-        </div>
-        {children}
+        <Providers>
+          <div className="flex items-center justify-center w-full">
+            <FloatingDock mobileClassName="translate-y-20" items={links} />
+          </div>
+          <ToastProvider>{children}</ToastProvider>
+        </Providers>
       </body>
     </html>
   );
