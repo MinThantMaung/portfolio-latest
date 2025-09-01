@@ -2,13 +2,20 @@
 
 import LazySection from "./lazySection";
 import Skeleton from "../components/Skeleton";
+import CertificationSkeleton from "../skeletons/certificationSkeleton";
+import ProjectSkeleton from "../skeletons/projectSkeleton";
+import ServiceSkeleton from "../skeletons/serviceSkeleton";
+import ChangelogSkeleton from "../skeletons/changelogSkeleton";
+import QuotesSkeleton from "../skeletons/quotesSkeleton";
+import ContactSkeleton from "../skeletons/contactSkeleton";
+import TimelineSkeleton from "../skeletons/TimelineSkeleton";
 
 export default function SectionsClient() {
   return (
     <>
       <LazySection
         loader={() => import("../components/timeline")}
-        fallback={<Skeleton label="Timeline" />}
+        fallback={<TimelineSkeleton />}
         prefetchMargin="1200px 0px"
         mountMargin="300px 0px"
         idlePrefetch
@@ -16,7 +23,7 @@ export default function SectionsClient() {
       />
       <LazySection
         loader={() => import("../components/certification")}
-        fallback={<Skeleton label="Certification" />}
+        fallback={<CertificationSkeleton />}
         prefetchMargin="1200px 0px"
         mountMargin="300px 0px"
         idlePrefetch
@@ -24,7 +31,7 @@ export default function SectionsClient() {
       />
       <LazySection
         loader={() => import("../components/project")}
-        fallback={<Skeleton label="Projects" />}
+        fallback={<ProjectSkeleton />}
         prefetchMargin="1200px 0px"
         mountMargin="300px 0px"
         idlePrefetch
@@ -32,7 +39,7 @@ export default function SectionsClient() {
       />
       <LazySection
         loader={() => import("../components/service")}
-        fallback={<Skeleton label="Services" />}
+        fallback={<ServiceSkeleton />}
         prefetchMargin="1200px 0px"
         mountMargin="300px 0px"
         idlePrefetch
@@ -40,7 +47,7 @@ export default function SectionsClient() {
       />
       <LazySection
         loader={() => import("../components/changelog")}
-        fallback={<Skeleton label="Changelog" />}
+        fallback={<ChangelogSkeleton />}
         prefetchMargin="1200px 0px"
         mountMargin="300px 0px"
         idlePrefetch
@@ -48,7 +55,7 @@ export default function SectionsClient() {
       />
       <LazySection
         loader={() => import("../components/quotes")}
-        fallback={<Skeleton label="Quotes" />}
+        fallback={<QuotesSkeleton />}
         prefetchMargin="1200px 0px"
         mountMargin="300px 0px"
         idlePrefetch
@@ -56,7 +63,7 @@ export default function SectionsClient() {
       />
       <LazySection
         loader={() => import("../components/contact")}
-        fallback={<Skeleton label="Contact" />}
+        fallback={<ContactSkeleton />}
         prefetchMargin="1200px 0px"
         mountMargin="300px 0px"
         idlePrefetch
