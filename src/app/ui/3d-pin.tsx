@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/app/lib/utils";
+import Link from "next/link";
 
 export const PinContainer = ({
   children,
@@ -28,7 +29,7 @@ export const PinContainer = ({
   };
 
   return (
-    <a
+    <Link
       className={cn(
         "relative group/pin z-50  cursor-pointer",
         containerClassName
@@ -54,7 +55,7 @@ export const PinContainer = ({
         </div>
       </div>
       <PinPerspective title={title} href={href} />
-    </a>
+    </Link>
   );
 };
 

@@ -81,6 +81,7 @@ const FloatingDockMobile = ({
       <button
         onClick={() => setOpen(!open)}
         className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50"
+        aria-label="Toggle navigation"
       >
         <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500" />
       </button>
@@ -168,7 +169,7 @@ function IconContainer({
   });
 
   return (
-    <a href={href}>
+    <Link href={href} aria-label={title}>
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -195,6 +196,6 @@ function IconContainer({
           {icon}
         </motion.div>
       </motion.div>
-    </a>
+    </Link>
   );
 }
