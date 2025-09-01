@@ -130,7 +130,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={isSubmitting || isPending}
-              className="w-full h-14 py-4 bg-blue-700 text-white rounded-lg sm:mt-1 mt-2 disabled:opacity-60"
+              className="w-full h-14 py-4 bg-blue-700 text-white rounded-lg sm:mt-1 mt-2 disabled:opacity-60 cursor-pointer"
             >
               {isSubmitting || isPending ? (
                 <span className="loading loading-spinner loading-sm text-white" />
