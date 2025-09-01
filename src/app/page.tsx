@@ -1,7 +1,8 @@
 // app/page.tsx  (Server Component by default)
 import Hero from "./components/hero";
 import { Skills } from "./components/skills";
-import SectionsClient from "./components/section-client";
+import SectionsClient from "./common/section-client";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
