@@ -58,7 +58,7 @@ const Contact = () => {
     errors[name] ? "border-red-500 focus-within:border-red-500" : "";
 
   return (
-    <div className="flex md:mx-28 mx-4 min-h-screen justify-center items-center">
+    <div className="flex flex-col md:flex-row md:mx-28 mx-4 min-h-screen justify-center items-center">
       <div className="md:w-1/2">
         <h1 className="font-bold text-3xl">Contact Us</h1>
         <div className="mt-6 md:mt-12 text-lg md:mr-10 mr-0">
