@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { inter } from "@/app/ui/fonts";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { FloatingDock } from "./ui/floating-dock";
 import { IconArticle, IconHome } from "@tabler/icons-react";
 import Providers from "./common/queryWrapper";
 import { ToastProvider } from "./common/ToastProvider";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Min Thant Mg | Front-end Developer",
@@ -14,25 +16,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   const links = [
-    {
-      title: "Home",
-      icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/",
-    },
-    {
-      title: "Blogs",
-      icon: (
-        <IconArticle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/blogs",
-    },
+    { title: "Home", icon: <IconHome />, href: "/" },
+    { title: "Blogs", icon: <IconArticle />, href: "/blogs" },
   ];
+
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>

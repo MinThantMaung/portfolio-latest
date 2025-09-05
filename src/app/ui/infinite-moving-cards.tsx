@@ -96,7 +96,7 @@ export const InfiniteMovingCards = ({
               <span className="relative z-20 text-sm leading-[1.6] font-normal text-black flex justify-center items-center">
                 <Image
                   src={item.url}
-                  alt={`${item.name} logo`} 
+                  alt={`${item.name} logo`}
                   width={100}
                   height={100}
                 />
