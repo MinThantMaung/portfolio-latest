@@ -12,7 +12,7 @@ export function Skills() {
         <h2 className="font-bold text-3xl ml-4 md:ml-0 md:text-center">
           SKILLS
         </h2>
-        <div className="mx-4 md:mx-24 md:text-center mt-6">
+        <div className="mx-4 md:mx-24 text-base md:text-center mt-6">
           {staticData.skill_description}
         </div>
         <div className="h-52 bg-white flex flex-col antialiased items-center justify-center relative overflow-hidden my-12 md:my-20">

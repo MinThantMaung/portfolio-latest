@@ -11,7 +11,7 @@ const Certification = () => {
         <h2 className="font-bold text-3xl ml-4 md:ml-0 md:text-center md:pt-12 pt-4">
           CERTIFICATES
         </h2>
-        <div className="mx-4 md:mx-24 md:text-center mt-6">
+        <div className="mx-4 md:mx-24 md:text-center my-6">
           {staticData.certificate_description}
         </div>
 

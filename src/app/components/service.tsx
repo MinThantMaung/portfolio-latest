@@ -11,7 +11,7 @@ const Service = () => {
       <div className="mx-4 md:mx-24 md:text-center mt-6">
         {staticData.service_description}
       </div>
-      <div className="max-w-5xl mx-auto px-8">
+      <div className="max-w-5xl mx-auto px-4">
         <HoverEffect items={serviceContent} />
       </div>
     </>

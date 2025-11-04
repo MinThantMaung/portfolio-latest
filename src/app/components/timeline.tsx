@@ -11,7 +11,7 @@ const Timeline = () => {
       <div className="mx-4 md:mx-24 md:text-center mt-6">
         {staticData.exp_description}
       </div>
-      <div className="w-full md:py-12 py-4">
+      <div className="w-full md:py-12 py-6">
         <StickyScroll content={experienceItems} />
       </div>
     </>
