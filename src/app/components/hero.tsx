@@ -2,6 +2,8 @@
 
 import { staticData } from "../static";
 import { FlipWords } from "../ui/flip-words";
+import hero from "../../../public/hero.png";
+import Image from "next/image";
 
 const Hero = () => {
   const words = [
@@ -12,8 +14,8 @@ const Hero = () => {
 
   return (
     <>
-      <div className="min-h-screen flex justify-center items-center mx-4 md:mx-32">
-        <div className="flex">
+      <div className="min-h-screen flex justify-center items-center mx-4 md:mx-24">
+        <div className="flex flex-col md:flex-row md:gap-20">
           <div className="md:w-1/2">
             <h2 className="text-2xl md:text-3xl font-bold mb-2">
               {staticData.name}
@@ -31,6 +33,9 @@ const Hero = () => {
             >
               {staticData.download}
             </a>
+          </div>
+          <div className="md:w-1/2 hidden md:block">
+            <Image src={hero} alt="" className="rounded-xl md:mt-4" />
           </div>
         </div>
       </div>
