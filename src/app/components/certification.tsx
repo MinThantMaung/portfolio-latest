@@ -7,7 +7,7 @@ import { staticData } from "../static";
 const Certification = () => {
   return (
     <>
-      <div className="min-h-screen">
+      <div className="md:min-h-screen md:my-0 my-6">
         <h2 className="font-bold text-3xl ml-4 md:ml-0 md:text-center md:pt-12 pt-4">
           CERTIFICATES
         </h2>

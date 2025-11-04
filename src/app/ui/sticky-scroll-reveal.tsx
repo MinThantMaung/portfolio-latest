@@ -67,13 +67,13 @@ export const StickyScroll = ({
       // animate={{
       //   backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       // }}
-      className="relative flex h-[30rem] justify-center space-x-10 lg:space-x-28 overflow-y-auto rounded-md md:p-10 no-scrollbar"
+      className="relative flex h-[30rem] justify-center lg:space-x-28 overflow-y-auto rounded-md md:p-10 no-scrollbar"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
         <div className="max-w-2xl">
           {content.map((item, index) => (
-            <div key={item.id} className="my-20">
+            <div key={item.id} className="mt-10">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -81,7 +81,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-black"
+                className="text-2xl md:mt-6 font-bold text-black"
               >
                 {item.year}
               </motion.h2>
@@ -92,7 +92,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-lg font-bold mt-2 text-black"
+                className="text-lg font-bold mt-4 md:mt-4 text-black"
               >
                 {item.title}
               </motion.h2>
@@ -103,7 +103,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-2 max-w-sm text-black"
+                className="text-lg max-w-sm text-black"
               >
                 {item.address}
               </motion.p>
@@ -114,13 +114,13 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-6 max-w-xl text-black"
+                className="text-base mt-12 md:mt-8 md:max-w-xl text-black"
               >
                 {item.description}
               </motion.p>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="h-40 hidden md:block" />
         </div>
       </div>
       <div
