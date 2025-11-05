@@ -11,7 +11,7 @@ const Project = () => {
         Projects
       </h2>
 
-      <p className="mx-4 md:mx-24 md:text-center mt-6 text-muted-foreground">
+      <p className="mx-4 md:mx-24 md:text-center mt-6 text-black">
         {staticData.project_description}
       </p>
 

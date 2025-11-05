@@ -6,6 +6,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { staticData } from "../static";
 import { useEmail } from "../../../hooks/useUser";
 import { useToast } from "../common/ToastProvider";
+import Image from "next/image";
+import linkedin from "../../../public/socials/linkedin.png";
+import github from "../../../public/socials/github.png";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 
 const contactSchema = z.object({
   email: z
@@ -58,87 +63,133 @@ const Contact = () => {
     errors[name] ? "border-red-500 focus-within:border-red-500" : "";
 
   return (
-    <div className="flex flex-col md:flex-row md:mx-28 mx-4 min-h-screen justify-center items-center">
-      <div className="md:w-1/2">
-        <h1 className="font-bold text-3xl">Contact Us</h1>
-        <div className="mt-6 md:mt-12 text-lg md:mr-10 mr-0">
-          {staticData.contact_description}
+    <div className="min-h-screen">
+      <h2 className="font-bold text-3xl ml-4 md:ml-0 md:text-center md:pt-14 pt-4">
+        Contact Us
+      </h2>
+      <p className="mx-4 md:mx-24 md:text-center mt-6 text-black">
+        Have a question or want to work together? We'd love to hear from you.
+      </p>
+      <div className="flex flex-col md:flex-row mx-4 md:mx-32 mt-16">
+        <div className="md:w-1/2 mt-4 md:mt-16">
+          <div className="text-lg md:mr-10 mr-0 mt-6">
+            {staticData.contact_description}
+          </div>
+          <div className="mt-10">Email:</div>
+          <div className="text-xl font-bold">minthantmg169@gmail.com</div>
+          <div className="mt-5">Others:</div>
+          <div className="flex gap-5 mt-2">
+            <Image
+              src={linkedin}
+              alt="LinkedIn logo"
+              className="size-7 cursor-pointer"
+            />
+            <Image
+              src={github}
+              alt="Github logo"
+              className="size-7 cursor-pointer"
+            />
+          </div>
         </div>
-      </div>
+        <div className="md:w-1/2 flex justify-end items-center my-4 md:my-0">
+          <div className="rounded-lg shadow-lg p-6 w-full max-w-sm">
+            <div className="text-xl font-bold text-start">Contact Us</div>
 
-      <div className="md:w-1/2 flex justify-end items-center md:py-10">
-        <div className="rounded-lg shadow-lg p-6 w-full max-w-sm">
-          <div className="text-xl font-bold text-start">Contact Us</div>
-
-          <form
-            method="POST"
-            className="space-y-3 mt-3"
-            onSubmit={handleSubmit(onSubmit)}
-            noValidate
-          >
-            <label
-              className={`input input-bordered flex items-center gap-2 bg-white ${invalid(
-                "email"
-              )}`}
-              aria-invalid={!!errors.email || undefined}
+            <form
+              method="POST"
+              className="space-y-4 mt-3"
+              onSubmit={handleSubmit(onSubmit)}
+              noValidate
             >
-              Email
-              <input
-                type="email"
-                className="bg-white w-full outline-none"
-                placeholder="user@gmail.com"
-                {...register("email")}
-              />
-            </label>
-            {errors.email && (
-              <p className="text-sm text-red-600">{errors.email.message}</p>
-            )}
+              {/* Email */}
+              <div className="grid w-full max-w-sm items-center gap-2">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="user@gmail.com"
+                  aria-invalid={!!errors.email || undefined}
+                  aria-describedby={errors.email ? "email-error" : undefined}
+                  className={
+                    errors.email
+                      ? "border-red-500 focus-visible:ring-red-500"
+                      : ""
+                  }
+                  {...register("email")}
+                />
+                {errors.email && (
+                  <p id="email-error" className="text-sm text-red-600">
+                    {errors.email.message}
+                  </p>
+                )}
+              </div>
 
-            <label
-              className={`input input-bordered flex items-center gap-2 bg-white ${invalid(
-                "subject"
-              )}`}
-              aria-invalid={!!errors.subject || undefined}
-            >
-              Subject
-              <input
-                type="text"
-                className="bg-white w-full outline-none"
-                placeholder="Subject"
-                {...register("subject")}
-              />
-            </label>
-            {errors.subject && (
-              <p className="text-sm text-red-600">{errors.subject.message}</p>
-            )}
+              {/* Subject */}
+              <div className="grid w-full max-w-sm items-center gap-2">
+                <Label htmlFor="subject">Subject</Label>
+                <Input
+                  id="subject"
+                  type="text"
+                  placeholder="Subject"
+                  aria-invalid={!!errors.subject || undefined}
+                  aria-describedby={
+                    errors.subject ? "subject-error" : undefined
+                  }
+                  className={
+                    errors.subject
+                      ? "border-red-500 focus-visible:ring-red-500"
+                      : ""
+                  }
+                  {...register("subject")}
+                />
+                {errors.subject && (
+                  <p id="subject-error" className="text-sm text-red-600">
+                    {errors.subject.message}
+                  </p>
+                )}
+              </div>
 
-            <div>
-              <textarea
-                placeholder="Description"
-                className={`textarea textarea-bordered textarea-md w-full bg-white ${invalid(
-                  "body"
-                )}`}
-                rows={5}
-                {...register("body")}
-                aria-invalid={!!errors.body || undefined}
-              />
-              {errors.body && (
-                <p className="text-sm text-red-600">{errors.body.message}</p>
-              )}
-            </div>
+              {/* Body */}
+              <div className="grid w-full max-w-sm items-center gap-2">
+                <Label htmlFor="body">Description</Label>
+                <textarea
+                  id="body"
+                  placeholder="Description"
+                  rows={5}
+                  aria-invalid={!!errors.body || undefined}
+                  aria-describedby={errors.body ? "body-error" : undefined}
+                  className={`w-full rounded-md border bg-white px-3 py-2 text-sm outline-none
+                  focus-visible:ring-2 focus-visible:ring-offset-2
+                  ${
+                    errors.body
+                      ? "border-red-500 focus-visible:ring-red-500"
+                      : "focus-visible:ring-black"
+                  }`}
+                  {...register("body")}
+                />
+                {errors.body && (
+                  <p id="body-error" className="text-sm text-red-600">
+                    {errors.body.message}
+                  </p>
+                )}
+              </div>
 
-            <button
-              type="submit"
-              disabled={isSubmitting || isPending}
-              className="w-full h-14 py-4 bg-blue-700 text-white rounded-lg sm:mt-1 mt-2 disabled:opacity-60 cursor-pointer"
-            >
-              {isSubmitting || isPending ? (
-                <span className="loading loading-spinner loading-sm text-white" />
-              ) : (
-                "Send"
-              )}
-            </button>
-          </form>
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  disabled={isSubmitting || isPending}
+                  className="w-1/2 h-14 py-4 bg-black text-white rounded-full disabled:opacity-60 text-sm
+                  cursor-pointer"
+                >
+                  {isSubmitting || isPending ? (
+                    <span className="loading loading-spinner loading-sm text-white" />
+                  ) : (
+                    "Send Message"
+                  )}
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
