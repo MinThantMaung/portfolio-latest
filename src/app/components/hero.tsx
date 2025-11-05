@@ -14,6 +14,7 @@ const Hero = () => {
 
   return (
     <>
+      <div className="">
         <div className="min-h-screen flex justify-center items-center mx-4 md:mx-24">
           <div className="flex flex-col md:flex-row md:gap-20">
             <div className="md:w-1/2">
