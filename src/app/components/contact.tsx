@@ -68,7 +68,8 @@ const Contact = () => {
         Contact Us
       </h2>
       <p className="mx-4 md:mx-24 md:text-center mt-6 text-black">
-        Have a question or want to work together? We'd love to hear from you.
+        Have a question or want to work together? We would love to hear from
+        you.
       </p>
       <div className="flex flex-col md:flex-row mx-4 md:mx-32 mt-16">
         <div className="md:w-1/2 mt-4 md:mt-16">
